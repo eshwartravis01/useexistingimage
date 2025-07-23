@@ -1,0 +1,8 @@
+vm:  # existing key
+  use: naruto_image
+
+script:
+  - echo "Ok"
+  - g++ hello.cpp -o hello
+  - echo "Running hello"
+  - ./hello
