@@ -1,5 +1,6 @@
 vm:  # existing key
-  use: naruto_image
+  use: 
+    name: naruto_image
 
 script:
   - echo "Ok"
