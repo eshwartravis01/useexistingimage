@@ -1,3 +1,2 @@
 vm:
-  use:
-    name: naruto_image
+  use: naruto_image
