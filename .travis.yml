@@ -1,7 +1,10 @@
-vm:
-  use: kakashi_image
-script:
-  - echo "Ok"
-  - g++ hello.cpp -o hello
-  - echo "Running hello"
-  - ./hello
+jobs:
+  include:
+    - stage: use naruto_image
+      vm:
+        use:
+          name: naruto_image
+    - stage: use Itachi_image
+      vm:
+        use:
+          name: Itachi_image
