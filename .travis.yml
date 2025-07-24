@@ -1,7 +1,12 @@
-vm:  # existing key
-  use: 
-    name: naruto_image
-
+vm:
+  use: naruto_image
+  create:
+    name: Itachi_image
+before_install:
+  - sudo apt-get -y install libxml2-dev
+addons:
+  apt:
+    update: true
 script:
   - echo "Ok"
   - g++ hello.cpp -o hello
