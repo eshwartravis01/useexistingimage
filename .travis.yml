@@ -1,9 +1,3 @@
-os: linux
-dist: focal
 vm:
-  use: Luffy_image
-script:
-  - echo "Ok"
-  - g++ hello.cpp -o hello
-  - echo "Running hello"
-  - ./hello
+  use:
+    name:
