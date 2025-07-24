@@ -4,9 +4,8 @@ jobs:
       os: linux
       dist: focal
       language: generic
-      vm:
-        create:
-          name: new-image_2
+        vm:
+          use: new-image_2
       before_install:
         - sudo apt-get -y install libxml2-dev
       addons:
