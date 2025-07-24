@@ -1,2 +1,7 @@
 vm:
   use: kakashi_image
+script:
+  - echo "Ok"
+  - g++ hello.cpp -o hello
+  - echo "Running hello"
+  - ./hello
