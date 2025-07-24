@@ -1,2 +1,10 @@
+os: linux
+dist: focal
 vm:
-  use: naruto_image
+  use: 
+    name: Itachi_image
+script:
+  - echo "Ok"
+  - g++ hello.cpp -o hello
+  - echo "Running hello"
+  - ./hello
