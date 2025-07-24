@@ -1,12 +1,19 @@
-os: linux
-dist: focal
-vm:
-  use: 
-    name: Itachi_image
-script:
-  - echo "Ok"
-  - g++ hello.cpp -o hello
-  - echo "Running hello"
-  - ./hello
-
-
+jobs:
+  include:
+    - stage: create image
+      os: linux
+      dist: focal
+      language: generic
+      vm:
+        create:
+          name: new-image
+      before_install:
+        - sudo apt-get -y install libxml2-dev
+      addons:
+        apt:
+          update: true
+    - stage: use custom image
+      vm:
+        use: new-image
+      script:
+        - echo "Running job with custom image"
