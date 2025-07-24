@@ -1,8 +1,7 @@
 os: linux
-dist: xenial
+dist: focal
 vm:
-  create:
-    name: Luffy_image
+  use: Luffy_image
 script:
   - echo "Ok"
   - g++ hello.cpp -o hello
