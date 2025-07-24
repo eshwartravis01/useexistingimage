@@ -1,10 +1,15 @@
-os: linux
-dist: focal
-vm:
-  use: 
-    name: Itachi_image
-script:
-  - echo "Ok"
-  - g++ hello.cpp -o hello
-  - echo "Running hello"
-  - ./hello
+jobs:
+   include:
+    - stage: create image
+      os: linux
+      dist: focal
+      language: generic
+      vm:
+        create:
+          name: fail-image
+    - stage: use image
+      vm:
+        use:
+          name: fail-image
+      script:
+        - echo "Running with custom image"
