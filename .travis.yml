@@ -1,7 +1,8 @@
 os: linux
 dist: xenial
 vm:
-  use: Itachi_image
+  create:
+    name: Luffy_image
 script:
   - echo "Ok"
   - g++ hello.cpp -o hello
