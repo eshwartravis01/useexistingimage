@@ -1,18 +1,16 @@
-jobs:
-  include:
-    - stage: create image
-      os: linux
-      dist: focal
-      language: generic
-        vm:
-          use: new-image_2
-      before_install:
-        - sudo apt-get -y install libxml2-dev
-      addons:
-        apt:
-          update: true
-    - stage: use custom image
-      vm:
-        use: new-image_2
-      script:
-        - echo "Running job with custom image"
+os: linux
+dist: focal
+ 
+vm:  # Existing key
+  create:
+    name: my_testuser1_name  # Custom identifier string, human-readable
+ 
+before_install:
+  - sudo apt-get -y install libxml2-dev
+ 
+addons:
+  apt:
+    update: true
+ 
+script:
+  - echo "TEST"
