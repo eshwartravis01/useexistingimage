@@ -1,16 +1,17 @@
 os: linux
 dist: focal
- 
+
 vm:
   use:
-    name: test_error_image
- 
+    name: test_error_image2
+
 before_install:
   - sudo apt-get -y install libxml2-dev
- 
+
 addons:
   apt:
     update: true
- 
+
 script:
   - echo "TEST"
+  - exit 1  # ❌ Force an error here
