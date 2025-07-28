@@ -3,7 +3,7 @@ dist: focal
  
 vm:
   use:
-    name: "newimage check"
+    name: error_state_image
  
 before_install:
   - sudo apt-get -y install libxml2-dev
