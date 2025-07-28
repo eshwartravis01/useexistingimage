@@ -1,9 +1,9 @@
 os: linux
 dist: focal
  
-vm:  # Existing key
-  create:
-    name: my_testuser1_name  # Custom identifier string, human-readable
+vm:
+  use:
+    name: error-image
  
 before_install:
   - sudo apt-get -y install libxml2-dev
