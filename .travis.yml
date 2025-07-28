@@ -2,7 +2,7 @@ os: linux
 dist: focal
  
 vm:
-  use:
+  create:
     name: error_state_imageeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
  
 before_install:
