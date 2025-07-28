@@ -3,7 +3,7 @@ dist: focal
  
 vm:
   use:
-    name: error-image
+    name: fail-image
  
 before_install:
   - sudo apt-get -y install libxml2-dev
