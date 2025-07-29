@@ -2,7 +2,7 @@ os: linux
 dist: focal
  
 vm:
-  size: [gpu-medium]
+  size: gpu-medium
  
 before_install:
   - sudo apt-get -y install libxml2-dev
