@@ -4,6 +4,7 @@ dist: focal
 vm:
   use:
     name: test_error_image3
+  size: [gpu-medium]
  
 before_install:
   - sudo apt-get -y install libxml2-dev
