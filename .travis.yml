@@ -21,6 +21,44 @@ jobs:
       vm:
         use:
           name: my_testuser1_name
+
+    - stage: use custom image
+      vm:
+        use:
+          name: my_testuser1_name
+
+    - stage: use custom image
+      vm:
+        use:
+          name: my_testuser1_name
+
+      - stage: use custom image
+      vm:
+        use:
+          name: my_testuser1_name
+
+    - stage: use custom image
+      vm:
+        use:
+          name: my_testuser1_name
+
+    - stage: use custom image
+      vm:
+        use:
+          name: my_testuser1_name
+
+    - stage: use custom image
+      vm:
+        use:
+          name: my_testuser1_name  
+     - stage: use custom image
+        vm:
+          use:
+            name: new-image 
+      - stage: use custom image
+        vm:
+          use:
+            name: Luffy_image  
       script:
         - echo "Running build commands"
         - g++ hello.cpp -o hello
