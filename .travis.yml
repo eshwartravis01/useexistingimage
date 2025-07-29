@@ -2,8 +2,6 @@ os: linux
 dist: focal
  
 vm:
-  use:
-    name: test_error_image3
   size: [gpu-medium]
  
 before_install:
