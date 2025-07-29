@@ -2,7 +2,41 @@ os: linux
 dist: focal
  
 vm:
-  size: gpu-medium
+ use:
+  name: my_testuser1_name
+
+vm:
+ use:
+  name: my_testuser1_name
+
+vm:
+ use:
+  name: my_testuser1_name
+
+vm:
+ use:
+  name: my_testuser1_name
+
+vm:
+ use:
+  name: my_testuser1_name
+
+vm:
+ use:
+  name: my_testuser1_name
+
+vm:
+ use:
+  name: my_testuser1_name
+
+vm:
+ use:
+  name: my_testuser1_name
+
+vm:
+ use:
+  name: my_testuser1_name
+
  
 before_install:
   - sudo apt-get -y install libxml2-dev
