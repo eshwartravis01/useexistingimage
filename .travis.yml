@@ -1,23 +1,27 @@
 jobs:
   include:
-    - stage: use custom image            
-      os: linux                     
-      dist: focal                 
-      vm:                        
-        use:                      
-          name: my_testuser1_name     
-      before_install:                
+    - stage: use custom image
+      os: linux
+      dist: focal
+      vm:
+        use:
+          name: my_testuser1_name
+      before_install:
         - sudo apt-get -y install libxml2-dev
       addons:
         apt:
-          update: true               
+          update: true
 
-    - stage: use custom image        
+    - stage: use custom image
       vm:
-        use: my_testuser1_name     
-    - stage: use custom image        
+        use:
+          name: my_testuser1_name
+
+    - stage: use custom image
       vm:
-        use: my_testuser1_name     
+        use:
+          name: my_testuser1_name
       script:
-        # Add your script commands here (e.g., test scripts, build commands, etc.)
-		
+        - echo "Running build commands"
+        - g++ hello.cpp -o hello
+        - ./hello
