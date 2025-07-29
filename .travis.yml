@@ -1,50 +1,23 @@
-os: linux
-dist: focal
- 
-vm:
- use:
-  name: my_testuser1_name
+jobs:
+  include:
+    - stage: use custom image            
+      os: linux                     
+      dist: focal                 
+      vm:                        
+        use:                      
+          name: my_testuser1_name     
+      before_install:                
+        - sudo apt-get -y install libxml2-dev
+      addons:
+        apt:
+          update: true               
 
-vm:
- use:
-  name: my_testuser1_name
-
-vm:
- use:
-  name: my_testuser1_name
-
-vm:
- use:
-  name: my_testuser1_name
-
-vm:
- use:
-  name: my_testuser1_name
-
-vm:
- use:
-  name: my_testuser1_name
-
-vm:
- use:
-  name: my_testuser1_name
-
-vm:
- use:
-  name: my_testuser1_name
-
-vm:
- use:
-  name: my_testuser1_name
-
- 
-before_install:
-  - sudo apt-get -y install libxml2-dev
- 
-addons:
-  apt:
-    update: true
- 
-script:
-  - echo "TEST"
-  
+    - stage: use custom image        
+      vm:
+        use: my_testuser1_name     
+    - stage: use custom image        
+      vm:
+        use: my_testuser1_name     
+      script:
+        # Add your script commands here (e.g., test scripts, build commands, etc.)
+		
