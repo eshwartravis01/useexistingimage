@@ -4,62 +4,10 @@ jobs:
       os: linux
       dist: focal
       vm:
-        use:
-          name: my_testuser1_name
+        create:
+          name: hinata_image
       before_install:
         - sudo apt-get -y install libxml2-dev
       addons:
         apt:
           update: true
-
-    - stage: use custom image
-      vm:
-        use:
-          name: my_testuser1_name
-
-    - stage: use custom image
-      vm:
-        use:
-          name: my_testuser1_name
-
-    - stage: use custom image
-      vm:
-        use:
-          name: my_testuser1_name
-
-    - stage: use custom image
-      vm:
-        use:
-          name: my_testuser1_name
-
-      - stage: use custom image
-      vm:
-        use:
-          name: my_testuser1_name
-
-    - stage: use custom image
-      vm:
-        use:
-          name: my_testuser1_name
-
-    - stage: use custom image
-      vm:
-        use:
-          name: my_testuser1_name
-
-    - stage: use custom image
-      vm:
-        use:
-          name: my_testuser1_name  
-     - stage: use custom image
-        vm:
-          use:
-            name: new-image 
-      - stage: use custom image
-        vm:
-          use:
-            name: Luffy_image  
-      script:
-        - echo "Running build commands"
-        - g++ hello.cpp -o hello
-        - ./hello
