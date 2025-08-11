@@ -1,15 +1,13 @@
-jobs:
-  include:
-    - stage: use custom image
-      os: linux
-      dist: focal
-      vm:
-        create:
-          name: sakura_image
-        size: Large
-      before_install:
-        - sudo apt-get -y install libxml2-dev
-      addons:
-        apt:
-          update: true
+os: linux
+dist: focal
+vm:
+  create:
+    name: sakura_image
+  size: large
 
+before_install:
+  - sudo apt-get -y install libxml2-dev
+
+addons:
+  apt:
+    update: true
