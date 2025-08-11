@@ -2,9 +2,9 @@ os: linux
 dist: focal
 
 vm:
-  use:
-    name: asta_image
-  size: medium
+  create:
+    name: yuno_image
+  size: small
 
 before_install:
   - sudo apt-get -y install libxml2-dev
