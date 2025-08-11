@@ -3,7 +3,7 @@ dist: focal
 
 vm:
   use:
-    name: Asta_image #use_existing_image
+    name: asta_image #use_existing_image
   size: large
 
 before_install:
