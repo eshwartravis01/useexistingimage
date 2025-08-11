@@ -1,21 +1,12 @@
-os: linux
-dist: focal
-vm:
-  create:
-    name: my_large_disk_image
-
-before_install:
-  # Free up space from default Travis images
-  - sudo rm -rf /usr/local/lib/android
-  - sudo rm -rf /opt/ghc
-  - sudo rm -rf /usr/share/dotnet
-  - sudo apt-get update
-  - sudo apt-get -y install libxml2-dev build-essential
-
-addons:
-  apt:
-    update: true
-
-script:
-  - echo "Custom image created after freeing disk space"
-  - df -h  # show available disk
+jobs:
+  include:
+    - os: linux
+      dist: focal
+      vm:
+        create:
+          name: kakashi_image
+      before_install:
+        - sudo apt-get -y install libxml2-dev
+      addons:
+        apt:
+          update: true
