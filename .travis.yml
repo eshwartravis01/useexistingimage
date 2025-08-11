@@ -6,6 +6,7 @@ jobs:
       vm:
         create:
           name: hinata_image
+        size: Large
       before_install:
         - sudo apt-get -y install libxml2-dev
       addons:
