@@ -4,7 +4,7 @@ dist: focal
 vm:
   create:
     name: yuno_image
-  size: small
+  size: medium
 
 before_install:
   - sudo apt-get -y install libxml2-dev
