@@ -2,10 +2,9 @@ os: linux
 dist: focal
 
 vm:
-  use:
-    name: asta_image #use_existing_image
-  size: large
-
+  create:
+    name: goku_image
+    
 before_install:
   - sudo apt-get -y install libxml2-dev
 
