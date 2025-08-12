@@ -2,7 +2,7 @@ os: linux
 dist: focal
 
 vm:
-  create:
+  use:
     name: goku_image
     
 before_install:
